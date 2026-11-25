@@ -1,0 +1,2412 @@
+{
+ "seed": 7,
+ "start": "2026-11-16T00:00:00Z",
+ "hours": 72,
+ "sources": {
+  "sensor": {
+   "reliability": "A",
+   "credibility": 2,
+   "name": "Coastal radar and AIS feed"
+  },
+  "patrol": {
+   "reliability": "B",
+   "credibility": 2,
+   "name": "Ground patrol reports"
+  },
+  "comms": {
+   "reliability": "B",
+   "credibility": 3,
+   "name": "Communications log"
+  },
+  "imagery": {
+   "reliability": "A",
+   "credibility": 2,
+   "name": "Imagery analysis notes"
+  },
+  "osint": {
+   "reliability": "D",
+   "credibility": 4,
+   "name": "Open-source monitoring"
+  }
+ },
+ "places": {
+  "Port Avery": {
+   "lat": 46.137,
+   "lon": -60.195,
+   "aliases": [
+    "Avery harbour",
+    "PT AVERY"
+   ]
+  },
+  "Kestrel Point": {
+   "lat": 46.248,
+   "lon": -60.38,
+   "aliases": [
+    "Kestrel Pt",
+    "KESTREL"
+   ]
+  },
+  "Gannet Bank": {
+   "lat": 47.05,
+   "lon": -60.7,
+   "aliases": [
+    "the Gannet shoal",
+    "GANNET BK"
+   ]
+  },
+  "Brannock Narrows": {
+   "lat": 45.98,
+   "lon": -60.9,
+   "aliases": [
+    "the Narrows",
+    "BRANNOCK"
+   ]
+  },
+  "Fairhaven Depot": {
+   "lat": 46.03,
+   "lon": -60.52,
+   "aliases": [
+    "Fairhaven",
+    "FH DEPOT"
+   ]
+  },
+  "Ridley Airfield": {
+   "lat": 46.165,
+   "lon": -60.05,
+   "aliases": [
+    "Ridley strip",
+    "RIDLEY AFD"
+   ]
+  },
+  "Highcliff Radar": {
+   "lat": 46.82,
+   "lon": -60.4,
+   "aliases": [
+    "Highcliff site",
+    "HC RADAR"
+   ]
+  },
+  "Merrow Island": {
+   "lat": 47.38,
+   "lon": -61.85,
+   "aliases": [
+    "Merrow",
+    "MERROW IS"
+   ]
+  },
+  "Tolland Ferry": {
+   "lat": 45.64,
+   "lon": -61.41,
+   "aliases": [
+    "the Tolland crossing",
+    "TOLLAND"
+   ]
+  },
+  "Cobb Reach": {
+   "lat": 46.6,
+   "lon": -61.1,
+   "aliases": [
+    "Cobb waters",
+    "COBB RCH"
+   ]
+  },
+  "Ashby Substation": {
+   "lat": 46.09,
+   "lon": -60.3,
+   "aliases": [
+    "Ashby sub",
+    "ASHBY SS"
+   ]
+  },
+  "North Spit": {
+   "lat": 46.9,
+   "lon": -60.25,
+   "aliases": [
+    "the Spit",
+    "N SPIT"
+   ]
+  }
+ },
+ "entities": {
+  "V-ORCA": {
+   "kind": "vessel",
+   "names": [
+    "MV Orca Dawn",
+    "ORCA DAWN",
+    "fishing vessel Orca"
+   ],
+   "ais": "316000101"
+  },
+  "V-TERN": {
+   "kind": "vessel",
+   "names": [
+    "MV Grey Tern",
+    "GREY TERN",
+    "the Tern"
+   ],
+   "ais": "316000102"
+  },
+  "V-HALCYON": {
+   "kind": "vessel",
+   "names": [
+    "research vessel Halcyon",
+    "HALCYON",
+    "RV Halcyon"
+   ],
+   "ais": "316000103"
+  },
+  "V-UNKNOWN": {
+   "kind": "vessel",
+   "names": [
+    "unidentified vessel",
+    "dark vessel",
+    "UNK VESSEL"
+   ],
+   "ais": null
+  },
+  "A-LANTERN21": {
+   "kind": "aircraft",
+   "names": [
+    "LANTERN 21",
+    "LNTRN21",
+    "patrol aircraft Lantern 21"
+   ]
+  },
+  "A-DRONE": {
+   "kind": "aircraft",
+   "names": [
+    "small drone",
+    "UAS",
+    "quadcopter"
+   ]
+  },
+  "U-BLUE3": {
+   "kind": "unit",
+   "names": [
+    "Blue 3",
+    "BLUE-3",
+    "3rd Blue troop"
+   ]
+  },
+  "U-RED1": {
+   "kind": "unit",
+   "names": [
+    "Red 1",
+    "RED-1",
+    "opposing force element Red One"
+   ]
+  }
+ },
+ "events": [
+  {
+   "id": "E001",
+   "type": "gps_interference",
+   "start": "2026-11-18T17:42:00Z",
+   "end": "2026-11-18T18:25:34Z",
+   "place": "North Spit",
+   "lat": 46.9,
+   "lon": -60.25,
+   "entities": [],
+   "count": null
+  },
+  {
+   "id": "E002",
+   "type": "vessel_loiter",
+   "start": "2026-11-16T05:56:00Z",
+   "end": "2026-11-16T11:13:06Z",
+   "place": "Gannet Bank",
+   "lat": 47.05,
+   "lon": -60.7,
+   "entities": [
+    "V-TERN"
+   ],
+   "count": null
+  },
+  {
+   "id": "E003",
+   "type": "vessel_loiter",
+   "start": "2026-11-18T15:06:00Z",
+   "end": "2026-11-18T19:07:47Z",
+   "place": "Gannet Bank",
+   "lat": 47.05,
+   "lon": -60.7,
+   "entities": [
+    "V-ORCA"
+   ],
+   "count": null
+  },
+  {
+   "id": "E004",
+   "type": "power_outage",
+   "start": "2026-11-17T05:32:00Z",
+   "end": "2026-11-17T06:44:34Z",
+   "place": "Ashby Substation",
+   "lat": 46.09,
+   "lon": -60.3,
+   "entities": [],
+   "count": null
+  },
+  {
+   "id": "E005",
+   "type": "power_outage",
+   "start": "2026-11-16T05:02:00Z",
+   "end": "2026-11-16T08:30:50Z",
+   "place": "Ashby Substation",
+   "lat": 46.09,
+   "lon": -60.3,
+   "entities": [],
+   "count": null
+  },
+  {
+   "id": "E006",
+   "type": "air_activity",
+   "start": "2026-11-17T20:03:00Z",
+   "end": "2026-11-17T22:18:17Z",
+   "place": "Ridley Airfield",
+   "lat": 46.165,
+   "lon": -60.05,
+   "entities": [
+    "A-LANTERN21"
+   ],
+   "count": null
+  },
+  {
+   "id": "E007",
+   "type": "vessel_loiter",
+   "start": "2026-11-16T16:05:00Z",
+   "end": "2026-11-16T18:16:10Z",
+   "place": "Cobb Reach",
+   "lat": 46.6,
+   "lon": -61.1,
+   "entities": [
+    "V-TERN"
+   ],
+   "count": null
+  },
+  {
+   "id": "E008",
+   "type": "power_outage",
+   "start": "2026-11-16T10:50:00Z",
+   "end": "2026-11-16T13:27:19Z",
+   "place": "Fairhaven Depot",
+   "lat": 46.03,
+   "lon": -60.52,
+   "entities": [],
+   "count": null
+  },
+  {
+   "id": "E009",
+   "type": "convoy_move",
+   "start": "2026-11-16T08:02:00Z",
+   "end": "2026-11-16T09:36:53Z",
+   "place": "Kestrel Point",
+   "lat": 46.248,
+   "lon": -60.38,
+   "entities": [
+    "U-BLUE3"
+   ],
+   "count": 7
+  },
+  {
+   "id": "E010",
+   "type": "vessel_transit",
+   "start": "2026-11-17T14:23:00Z",
+   "end": "2026-11-17T16:48:27Z",
+   "place": "Cobb Reach",
+   "lat": 46.6,
+   "lon": -61.1,
+   "entities": [
+    "V-ORCA"
+   ],
+   "count": null
+  },
+  {
+   "id": "E011",
+   "type": "air_activity",
+   "start": "2026-11-17T10:53:00Z",
+   "end": "2026-11-17T13:14:38Z",
+   "place": "Highcliff Radar",
+   "lat": 46.82,
+   "lon": -60.4,
+   "entities": [
+    "A-LANTERN21"
+   ],
+   "count": null
+  },
+  {
+   "id": "E012",
+   "type": "air_activity",
+   "start": "2026-11-18T07:13:00Z",
+   "end": "2026-11-18T08:34:34Z",
+   "place": "Ridley Airfield",
+   "lat": 46.165,
+   "lon": -60.05,
+   "entities": [
+    "A-LANTERN21"
+   ],
+   "count": null
+  },
+  {
+   "id": "E013",
+   "type": "drone_sighting",
+   "start": "2026-11-17T12:51:00Z",
+   "end": "2026-11-17T13:20:51Z",
+   "place": "Ridley Airfield",
+   "lat": 46.165,
+   "lon": -60.05,
+   "entities": [
+    "A-DRONE"
+   ],
+   "count": null
+  },
+  {
+   "id": "E014",
+   "type": "drone_sighting",
+   "start": "2026-11-17T18:34:00Z",
+   "end": "2026-11-17T19:18:24Z",
+   "place": "Ashby Substation",
+   "lat": 46.09,
+   "lon": -60.3,
+   "entities": [
+    "A-DRONE"
+   ],
+   "count": null
+  },
+  {
+   "id": "E015",
+   "type": "convoy_move",
+   "start": "2026-11-18T04:41:00Z",
+   "end": "2026-11-18T06:01:31Z",
+   "place": "Port Avery",
+   "lat": 46.137,
+   "lon": -60.195,
+   "entities": [
+    "U-RED1"
+   ],
+   "count": 2
+  },
+  {
+   "id": "E016",
+   "type": "vessel_transit",
+   "start": "2026-11-18T05:11:00Z",
+   "end": "2026-11-18T07:17:58Z",
+   "place": "Tolland Ferry",
+   "lat": 45.64,
+   "lon": -61.41,
+   "entities": [
+    "V-TERN"
+   ],
+   "count": null
+  },
+  {
+   "id": "E017",
+   "type": "gps_interference",
+   "start": "2026-11-17T17:34:00Z",
+   "end": "2026-11-17T18:48:42Z",
+   "place": "Kestrel Point",
+   "lat": 46.248,
+   "lon": -60.38,
+   "entities": [],
+   "count": null
+  },
+  {
+   "id": "E018",
+   "type": "vessel_transit",
+   "start": "2026-11-18T10:20:00Z",
+   "end": "2026-11-18T11:31:13Z",
+   "place": "Tolland Ferry",
+   "lat": 45.64,
+   "lon": -61.41,
+   "entities": [
+    "V-TERN"
+   ],
+   "count": null
+  },
+  {
+   "id": "E019",
+   "type": "vessel_transit",
+   "start": "2026-11-16T05:08:00Z",
+   "end": "2026-11-16T07:35:44Z",
+   "place": "Tolland Ferry",
+   "lat": 45.64,
+   "lon": -61.41,
+   "entities": [
+    "V-HALCYON"
+   ],
+   "count": null
+  },
+  {
+   "id": "E020",
+   "type": "port_activity",
+   "start": "2026-11-16T20:25:00Z",
+   "end": "2026-11-17T00:33:59Z",
+   "place": "Kestrel Point",
+   "lat": 46.248,
+   "lon": -60.38,
+   "entities": [
+    "V-HALCYON"
+   ],
+   "count": 9
+  },
+  {
+   "id": "E021",
+   "type": "gps_interference",
+   "start": "2026-11-16T12:28:00Z",
+   "end": "2026-11-16T13:52:58Z",
+   "place": "Kestrel Point",
+   "lat": 46.248,
+   "lon": -60.38,
+   "entities": [],
+   "count": null
+  },
+  {
+   "id": "E022",
+   "type": "air_activity",
+   "start": "2026-11-17T04:09:00Z",
+   "end": "2026-11-17T05:55:54Z",
+   "place": "Highcliff Radar",
+   "lat": 46.82,
+   "lon": -60.4,
+   "entities": [
+    "A-LANTERN21"
+   ],
+   "count": null
+  },
+  {
+   "id": "E023",
+   "type": "convoy_move",
+   "start": "2026-11-17T07:39:00Z",
+   "end": "2026-11-17T09:03:05Z",
+   "place": "Port Avery",
+   "lat": 46.137,
+   "lon": -60.195,
+   "entities": [
+    "U-BLUE3"
+   ],
+   "count": 8
+  },
+  {
+   "id": "E024",
+   "type": "drone_sighting",
+   "start": "2026-11-18T01:13:00Z",
+   "end": "2026-11-18T01:40:27Z",
+   "place": "Ridley Airfield",
+   "lat": 46.165,
+   "lon": -60.05,
+   "entities": [
+    "A-DRONE"
+   ],
+   "count": null
+  },
+  {
+   "id": "E025",
+   "type": "air_activity",
+   "start": "2026-11-16T11:18:00Z",
+   "end": "2026-11-16T12:27:57Z",
+   "place": "Ridley Airfield",
+   "lat": 46.165,
+   "lon": -60.05,
+   "entities": [
+    "A-LANTERN21"
+   ],
+   "count": null
+  },
+  {
+   "id": "E026",
+   "type": "air_activity",
+   "start": "2026-11-16T01:49:00Z",
+   "end": "2026-11-16T03:47:11Z",
+   "place": "Gannet Bank",
+   "lat": 47.05,
+   "lon": -60.7,
+   "entities": [
+    "A-LANTERN21"
+   ],
+   "count": null
+  },
+  {
+   "id": "E027",
+   "type": "drone_sighting",
+   "start": "2026-11-16T20:14:00Z",
+   "end": "2026-11-16T20:29:07Z",
+   "place": "Ridley Airfield",
+   "lat": 46.165,
+   "lon": -60.05,
+   "entities": [
+    "A-DRONE"
+   ],
+   "count": null
+  },
+  {
+   "id": "E028",
+   "type": "gps_interference",
+   "start": "2026-11-16T09:34:00Z",
+   "end": "2026-11-16T11:06:08Z",
+   "place": "North Spit",
+   "lat": 46.9,
+   "lon": -60.25,
+   "entities": [],
+   "count": null
+  },
+  {
+   "id": "E029",
+   "type": "vessel_loiter",
+   "start": "2026-11-17T08:10:00Z",
+   "end": "2026-11-17T13:45:53Z",
+   "place": "Merrow Island",
+   "lat": 47.38,
+   "lon": -61.85,
+   "entities": [
+    "V-TERN"
+   ],
+   "count": null
+  },
+  {
+   "id": "E030",
+   "type": "power_outage",
+   "start": "2026-11-17T03:54:00Z",
+   "end": "2026-11-17T05:12:38Z",
+   "place": "Fairhaven Depot",
+   "lat": 46.03,
+   "lon": -60.52,
+   "entities": [],
+   "count": null
+  },
+  {
+   "id": "E031",
+   "type": "vessel_loiter",
+   "start": "2026-11-17T15:41:00Z",
+   "end": "2026-11-17T18:17:18Z",
+   "place": "Gannet Bank",
+   "lat": 47.05,
+   "lon": -60.7,
+   "entities": [
+    "V-TERN"
+   ],
+   "count": null
+  },
+  {
+   "id": "E032",
+   "type": "vessel_loiter",
+   "start": "2026-11-16T05:48:00Z",
+   "end": "2026-11-16T11:17:50Z",
+   "place": "Merrow Island",
+   "lat": 47.38,
+   "lon": -61.85,
+   "entities": [
+    "V-ORCA"
+   ],
+   "count": null
+  },
+  {
+   "id": "E033",
+   "type": "drone_sighting",
+   "start": "2026-11-17T00:42:00Z",
+   "end": "2026-11-17T01:15:04Z",
+   "place": "Ridley Airfield",
+   "lat": 46.165,
+   "lon": -60.05,
+   "entities": [
+    "A-DRONE"
+   ],
+   "count": null
+  },
+  {
+   "id": "E034",
+   "type": "port_activity",
+   "start": "2026-11-16T22:17:00Z",
+   "end": "2026-11-17T00:32:27Z",
+   "place": "Port Avery",
+   "lat": 46.137,
+   "lon": -60.195,
+   "entities": [
+    "V-ORCA"
+   ],
+   "count": 6
+  },
+  {
+   "id": "E035",
+   "type": "port_activity",
+   "start": "2026-11-18T09:34:00Z",
+   "end": "2026-11-18T13:38:34Z",
+   "place": "Port Avery",
+   "lat": 46.137,
+   "lon": -60.195,
+   "entities": [
+    "V-HALCYON"
+   ],
+   "count": 7
+  },
+  {
+   "id": "E036",
+   "type": "convoy_move",
+   "start": "2026-11-18T00:06:00Z",
+   "end": "2026-11-18T01:38:35Z",
+   "place": "Fairhaven Depot",
+   "lat": 46.03,
+   "lon": -60.52,
+   "entities": [
+    "U-RED1"
+   ],
+   "count": 3
+  },
+  {
+   "id": "E037",
+   "type": "power_outage",
+   "start": "2026-11-18T03:30:00Z",
+   "end": "2026-11-18T06:54:35Z",
+   "place": "Ashby Substation",
+   "lat": 46.09,
+   "lon": -60.3,
+   "entities": [],
+   "count": null
+  },
+  {
+   "id": "E038",
+   "type": "gps_interference",
+   "start": "2026-11-17T01:53:00Z",
+   "end": "2026-11-17T02:30:14Z",
+   "place": "Highcliff Radar",
+   "lat": 46.82,
+   "lon": -60.4,
+   "entities": [],
+   "count": null
+  },
+  {
+   "id": "E039",
+   "type": "vessel_loiter",
+   "start": "2026-11-17T09:43:00Z",
+   "end": "2026-11-17T15:21:12Z",
+   "place": "North Spit",
+   "lat": 46.9,
+   "lon": -60.25,
+   "entities": [
+    "V-UNKNOWN"
+   ],
+   "count": null
+  },
+  {
+   "id": "E040",
+   "type": "port_activity",
+   "start": "2026-11-17T04:24:00Z",
+   "end": "2026-11-17T08:37:48Z",
+   "place": "Port Avery",
+   "lat": 46.137,
+   "lon": -60.195,
+   "entities": [
+    "V-HALCYON"
+   ],
+   "count": 4
+  },
+  {
+   "id": "E041",
+   "type": "convoy_move",
+   "start": "2026-11-16T02:52:00Z",
+   "end": "2026-11-16T04:01:04Z",
+   "place": "Port Avery",
+   "lat": 46.137,
+   "lon": -60.195,
+   "entities": [
+    "U-BLUE3"
+   ],
+   "count": 9
+  },
+  {
+   "id": "E042",
+   "type": "gps_interference",
+   "start": "2026-11-16T11:38:00Z",
+   "end": "2026-11-16T12:57:22Z",
+   "place": "Highcliff Radar",
+   "lat": 46.82,
+   "lon": -60.4,
+   "entities": [],
+   "count": null
+  },
+  {
+   "id": "E043",
+   "type": "gps_interference",
+   "start": "2026-11-16T18:42:00Z",
+   "end": "2026-11-16T20:00:59Z",
+   "place": "Highcliff Radar",
+   "lat": 46.82,
+   "lon": -60.4,
+   "entities": [],
+   "count": null
+  },
+  {
+   "id": "E044",
+   "type": "vessel_loiter",
+   "start": "2026-11-18T15:07:00Z",
+   "end": "2026-11-18T20:04:34Z",
+   "place": "Merrow Island",
+   "lat": 47.38,
+   "lon": -61.85,
+   "entities": [
+    "V-UNKNOWN"
+   ],
+   "count": null
+  },
+  {
+   "id": "E045",
+   "type": "power_outage",
+   "start": "2026-11-18T09:27:00Z",
+   "end": "2026-11-18T13:12:11Z",
+   "place": "Ashby Substation",
+   "lat": 46.09,
+   "lon": -60.3,
+   "entities": [],
+   "count": null
+  },
+  {
+   "id": "E046",
+   "type": "convoy_move",
+   "start": "2026-11-17T12:44:00Z",
+   "end": "2026-11-17T14:14:37Z",
+   "place": "Port Avery",
+   "lat": 46.137,
+   "lon": -60.195,
+   "entities": [
+    "U-BLUE3"
+   ],
+   "count": 2
+  },
+  {
+   "id": "E047",
+   "type": "convoy_move",
+   "start": "2026-11-16T12:45:00Z",
+   "end": "2026-11-16T13:53:29Z",
+   "place": "Kestrel Point",
+   "lat": 46.248,
+   "lon": -60.38,
+   "entities": [
+    "U-BLUE3"
+   ],
+   "count": 2
+  },
+  {
+   "id": "E048",
+   "type": "gps_interference",
+   "start": "2026-11-17T23:34:00Z",
+   "end": "2026-11-18T00:50:39Z",
+   "place": "North Spit",
+   "lat": 46.9,
+   "lon": -60.25,
+   "entities": [],
+   "count": null
+  },
+  {
+   "id": "E049",
+   "type": "air_activity",
+   "start": "2026-11-16T19:54:00Z",
+   "end": "2026-11-16T20:59:03Z",
+   "place": "Ridley Airfield",
+   "lat": 46.165,
+   "lon": -60.05,
+   "entities": [
+    "A-LANTERN21"
+   ],
+   "count": null
+  },
+  {
+   "id": "E050",
+   "type": "gps_interference",
+   "start": "2026-11-17T18:48:00Z",
+   "end": "2026-11-17T20:45:36Z",
+   "place": "North Spit",
+   "lat": 46.9,
+   "lon": -60.25,
+   "entities": [],
+   "count": null
+  },
+  {
+   "id": "E051",
+   "type": "air_activity",
+   "start": "2026-11-18T00:17:00Z",
+   "end": "2026-11-18T01:50:15Z",
+   "place": "Gannet Bank",
+   "lat": 47.05,
+   "lon": -60.7,
+   "entities": [
+    "A-LANTERN21"
+   ],
+   "count": null
+  },
+  {
+   "id": "E052",
+   "type": "gps_interference",
+   "start": "2026-11-16T05:57:00Z",
+   "end": "2026-11-16T07:27:24Z",
+   "place": "Kestrel Point",
+   "lat": 46.248,
+   "lon": -60.38,
+   "entities": [],
+   "count": null
+  },
+  {
+   "id": "E053",
+   "type": "vessel_transit",
+   "start": "2026-11-16T15:31:00Z",
+   "end": "2026-11-16T17:51:20Z",
+   "place": "Brannock Narrows",
+   "lat": 45.98,
+   "lon": -60.9,
+   "entities": [
+    "V-ORCA"
+   ],
+   "count": null
+  },
+  {
+   "id": "E054",
+   "type": "port_activity",
+   "start": "2026-11-16T12:06:00Z",
+   "end": "2026-11-16T17:04:10Z",
+   "place": "Port Avery",
+   "lat": 46.137,
+   "lon": -60.195,
+   "entities": [
+    "V-HALCYON"
+   ],
+   "count": 8
+  },
+  {
+   "id": "E055",
+   "type": "gps_interference",
+   "start": "2026-11-16T07:17:00Z",
+   "end": "2026-11-16T08:51:59Z",
+   "place": "Highcliff Radar",
+   "lat": 46.82,
+   "lon": -60.4,
+   "entities": [],
+   "count": null
+  },
+  {
+   "id": "E056",
+   "type": "gps_interference",
+   "start": "2026-11-17T14:49:00Z",
+   "end": "2026-11-17T16:00:16Z",
+   "place": "North Spit",
+   "lat": 46.9,
+   "lon": -60.25,
+   "entities": [],
+   "count": null
+  },
+  {
+   "id": "E057",
+   "type": "vessel_loiter",
+   "start": "2026-11-17T03:14:00Z",
+   "end": "2026-11-17T06:33:33Z",
+   "place": "North Spit",
+   "lat": 46.9,
+   "lon": -60.25,
+   "entities": [
+    "V-UNKNOWN"
+   ],
+   "count": null
+  },
+  {
+   "id": "E058",
+   "type": "convoy_move",
+   "start": "2026-11-18T08:57:00Z",
+   "end": "2026-11-18T10:22:20Z",
+   "place": "Kestrel Point",
+   "lat": 46.248,
+   "lon": -60.38,
+   "entities": [
+    "U-RED1"
+   ],
+   "count": 8
+  },
+  {
+   "id": "E059",
+   "type": "convoy_move",
+   "start": "2026-11-17T13:37:00Z",
+   "end": "2026-11-17T15:32:09Z",
+   "place": "Kestrel Point",
+   "lat": 46.248,
+   "lon": -60.38,
+   "entities": [
+    "U-RED1"
+   ],
+   "count": 7
+  },
+  {
+   "id": "E060",
+   "type": "vessel_transit",
+   "start": "2026-11-16T20:03:00Z",
+   "end": "2026-11-16T21:09:54Z",
+   "place": "Cobb Reach",
+   "lat": 46.6,
+   "lon": -61.1,
+   "entities": [
+    "V-ORCA"
+   ],
+   "count": null
+  }
+ ],
+ "records": [
+  {
+   "source": "patrol",
+   "record_id": "PAT-00001",
+   "event_id": "E001",
+   "true_time": "2026-11-18T17:33:53Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00001",
+   "event_id": "E001",
+   "true_time": "2026-11-18T17:42:24Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00001",
+   "event_id": "E002",
+   "true_time": "2026-11-16T11:03:20Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00002",
+   "event_id": "E002",
+   "true_time": "2026-11-16T08:02:51Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00001",
+   "event_id": "E002",
+   "true_time": "2026-11-16T06:01:50Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00002",
+   "event_id": "E003",
+   "true_time": "2026-11-18T17:45:10Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00003",
+   "event_id": "E003",
+   "true_time": "2026-11-18T16:44:00Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "imagery",
+   "record_id": "IMA-00001",
+   "event_id": "E003",
+   "true_time": "2026-11-18T18:11:09Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00002",
+   "event_id": "E003",
+   "true_time": "2026-11-18T17:37:13Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00002",
+   "event_id": "E004",
+   "true_time": "2026-11-17T05:53:35Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00004",
+   "event_id": "E004",
+   "true_time": "2026-11-17T05:57:52Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00003",
+   "event_id": "E005",
+   "true_time": "2026-11-16T07:02:59Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "imagery",
+   "record_id": "IMA-00002",
+   "event_id": "E005",
+   "true_time": "2026-11-16T07:32:34Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00003",
+   "event_id": "E005",
+   "true_time": "2026-11-16T05:06:41Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00004",
+   "event_id": "E006",
+   "true_time": "2026-11-17T22:03:46Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00003",
+   "event_id": "E007",
+   "true_time": "2026-11-16T17:26:09Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00004",
+   "event_id": "E007",
+   "true_time": "2026-11-16T17:41:15Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00005",
+   "event_id": "E007",
+   "true_time": "2026-11-16T17:43:45Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00005",
+   "event_id": "E007",
+   "true_time": "2026-11-16T16:09:05Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00004",
+   "event_id": "E008",
+   "true_time": "2026-11-16T11:22:36Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00005",
+   "event_id": "E008",
+   "true_time": "2026-11-16T12:47:21Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "imagery",
+   "record_id": "IMA-00003",
+   "event_id": "E008",
+   "true_time": "2026-11-16T12:38:27Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00006",
+   "event_id": "E008",
+   "true_time": "2026-11-16T12:32:14Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00006",
+   "event_id": "E009",
+   "true_time": "2026-11-16T08:05:32Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "imagery",
+   "record_id": "IMA-00004",
+   "event_id": "E009",
+   "true_time": "2026-11-16T08:30:45Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00006",
+   "event_id": "E010",
+   "true_time": "2026-11-17T15:34:12Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00007",
+   "event_id": "E010",
+   "true_time": "2026-11-17T15:30:49Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00008",
+   "event_id": "E010",
+   "true_time": "2026-11-17T14:25:32Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00009",
+   "event_id": "E011",
+   "true_time": "2026-11-17T12:15:21Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00007",
+   "event_id": "E011",
+   "true_time": "2026-11-17T11:08:57Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00010",
+   "event_id": "E012",
+   "true_time": "2026-11-18T07:13:17Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00005",
+   "event_id": "E013",
+   "true_time": "2026-11-17T12:53:09Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00006",
+   "event_id": "E013",
+   "true_time": "2026-11-17T12:53:09Z",
+   "kind": "correction",
+   "duplicate_of": "PAT-00005"
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00007",
+   "event_id": "E013",
+   "true_time": "2026-11-17T13:00:19Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00008",
+   "event_id": "E014",
+   "true_time": "2026-11-17T18:35:50Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00008",
+   "event_id": "E014",
+   "true_time": "2026-11-17T18:45:47Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00009",
+   "event_id": "E015",
+   "true_time": "2026-11-18T04:42:52Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00011",
+   "event_id": "E016",
+   "true_time": "2026-11-18T06:29:04Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00012",
+   "event_id": "E016",
+   "true_time": "2026-11-18T06:10:57Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00007",
+   "event_id": "E017",
+   "true_time": "2026-11-17T17:44:41Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00013",
+   "event_id": "E018",
+   "true_time": "2026-11-18T10:50:26Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00014",
+   "event_id": "E018",
+   "true_time": "2026-11-18T10:37:01Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00010",
+   "event_id": "E018",
+   "true_time": "2026-11-18T11:09:36Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00009",
+   "event_id": "E018",
+   "true_time": "2026-11-18T10:39:14Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00015",
+   "event_id": "E019",
+   "true_time": "2026-11-16T06:41:01Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00016",
+   "event_id": "E019",
+   "true_time": "2026-11-16T06:43:24Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00017",
+   "event_id": "E019",
+   "true_time": "2026-11-16T07:16:57Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00010",
+   "event_id": "E019",
+   "true_time": "2026-11-16T06:05:50Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00018",
+   "event_id": "E020",
+   "true_time": "2026-11-16T22:35:03Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00008",
+   "event_id": "E020",
+   "true_time": "2026-11-16T22:19:15Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00009",
+   "event_id": "E020",
+   "true_time": "2026-11-16T22:19:15Z",
+   "kind": "correction",
+   "duplicate_of": "PAT-00008"
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00010",
+   "event_id": "E021",
+   "true_time": "2026-11-16T12:40:18Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00011",
+   "event_id": "E021",
+   "true_time": "2026-11-16T12:53:37Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00011",
+   "event_id": "E022",
+   "true_time": "2026-11-17T04:29:04Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00011",
+   "event_id": "E023",
+   "true_time": "2026-11-17T07:40:05Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00012",
+   "event_id": "E023",
+   "true_time": "2026-11-17T07:41:17Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "imagery",
+   "record_id": "IMA-00005",
+   "event_id": "E023",
+   "true_time": "2026-11-17T08:41:01Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00012",
+   "event_id": "E023",
+   "true_time": "2026-11-17T07:57:37Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00012",
+   "event_id": "E024",
+   "true_time": "2026-11-18T01:11:05Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00013",
+   "event_id": "E024",
+   "true_time": "2026-11-18T01:13:31Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00019",
+   "event_id": "E025",
+   "true_time": "2026-11-16T12:19:48Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00020",
+   "event_id": "E025",
+   "true_time": "2026-11-16T11:41:01Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00021",
+   "event_id": "E025",
+   "true_time": "2026-11-16T12:08:44Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00014",
+   "event_id": "E025",
+   "true_time": "2026-11-16T11:22:22Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00022",
+   "event_id": "E026",
+   "true_time": "2026-11-16T03:19:51Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00023",
+   "event_id": "E026",
+   "true_time": "2026-11-16T02:33:02Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00013",
+   "event_id": "E027",
+   "true_time": "2026-11-16T20:26:14Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00014",
+   "event_id": "E028",
+   "true_time": "2026-11-16T09:54:03Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00015",
+   "event_id": "E028",
+   "true_time": "2026-11-16T09:54:03Z",
+   "kind": "correction",
+   "duplicate_of": "PAT-00014"
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00024",
+   "event_id": "E029",
+   "true_time": "2026-11-17T10:49:36Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00015",
+   "event_id": "E029",
+   "true_time": "2026-11-17T10:23:25Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00013",
+   "event_id": "E029",
+   "true_time": "2026-11-17T09:57:19Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00016",
+   "event_id": "E030",
+   "true_time": "2026-11-17T04:24:31Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00016",
+   "event_id": "E030",
+   "true_time": "2026-11-17T04:00:37Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "imagery",
+   "record_id": "IMA-00006",
+   "event_id": "E030",
+   "true_time": "2026-11-17T04:28:21Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00025",
+   "event_id": "E031",
+   "true_time": "2026-11-17T17:05:10Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00026",
+   "event_id": "E031",
+   "true_time": "2026-11-17T17:09:36Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00027",
+   "event_id": "E031",
+   "true_time": "2026-11-17T16:49:40Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00017",
+   "event_id": "E031",
+   "true_time": "2026-11-17T15:59:36Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00018",
+   "event_id": "E031",
+   "true_time": "2026-11-17T15:59:36Z",
+   "kind": "duplicate",
+   "duplicate_of": "PAT-00017"
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00014",
+   "event_id": "E031",
+   "true_time": "2026-11-17T16:26:54Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00028",
+   "event_id": "E032",
+   "true_time": "2026-11-16T07:50:46Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "imagery",
+   "record_id": "IMA-00007",
+   "event_id": "E032",
+   "true_time": "2026-11-16T09:09:11Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00015",
+   "event_id": "E032",
+   "true_time": "2026-11-16T09:49:30Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00019",
+   "event_id": "E033",
+   "true_time": "2026-11-17T00:44:19Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00020",
+   "event_id": "E033",
+   "true_time": "2026-11-17T00:44:19Z",
+   "kind": "duplicate",
+   "duplicate_of": "PAT-00019"
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00016",
+   "event_id": "E033",
+   "true_time": "2026-11-17T00:59:39Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00029",
+   "event_id": "E034",
+   "true_time": "2026-11-17T00:26:06Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00030",
+   "event_id": "E034",
+   "true_time": "2026-11-16T23:13:05Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00017",
+   "event_id": "E034",
+   "true_time": "2026-11-16T22:17:38Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "imagery",
+   "record_id": "IMA-00008",
+   "event_id": "E034",
+   "true_time": "2026-11-17T00:06:12Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00017",
+   "event_id": "E034",
+   "true_time": "2026-11-17T00:06:14Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00031",
+   "event_id": "E035",
+   "true_time": "2026-11-18T10:09:40Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00018",
+   "event_id": "E035",
+   "true_time": "2026-11-18T12:58:46Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00021",
+   "event_id": "E036",
+   "true_time": "2026-11-18T00:31:21Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00018",
+   "event_id": "E036",
+   "true_time": "2026-11-18T00:41:01Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00019",
+   "event_id": "E036",
+   "true_time": "2026-11-18T00:39:15Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00022",
+   "event_id": "E037",
+   "true_time": "2026-11-18T04:52:58Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00020",
+   "event_id": "E037",
+   "true_time": "2026-11-18T04:20:59Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00023",
+   "event_id": "E038",
+   "true_time": "2026-11-17T01:58:31Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00032",
+   "event_id": "E039",
+   "true_time": "2026-11-17T11:46:33Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00033",
+   "event_id": "E039",
+   "true_time": "2026-11-17T09:56:47Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00024",
+   "event_id": "E039",
+   "true_time": "2026-11-17T12:15:36Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "imagery",
+   "record_id": "IMA-00009",
+   "event_id": "E039",
+   "true_time": "2026-11-17T14:35:38Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00034",
+   "event_id": "E040",
+   "true_time": "2026-11-17T05:46:11Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00019",
+   "event_id": "E040",
+   "true_time": "2026-11-17T05:17:22Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "imagery",
+   "record_id": "IMA-00010",
+   "event_id": "E040",
+   "true_time": "2026-11-17T05:26:21Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00025",
+   "event_id": "E041",
+   "true_time": "2026-11-16T03:13:50Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00020",
+   "event_id": "E041",
+   "true_time": "2026-11-16T03:36:04Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00021",
+   "event_id": "E042",
+   "true_time": "2026-11-16T11:49:13Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00021",
+   "event_id": "E042",
+   "true_time": "2026-11-16T12:28:44Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00026",
+   "event_id": "E043",
+   "true_time": "2026-11-16T19:05:47Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00022",
+   "event_id": "E043",
+   "true_time": "2026-11-16T18:45:26Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00035",
+   "event_id": "E044",
+   "true_time": "2026-11-18T16:36:36Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00036",
+   "event_id": "E044",
+   "true_time": "2026-11-18T19:45:41Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00037",
+   "event_id": "E044",
+   "true_time": "2026-11-18T15:25:56Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00027",
+   "event_id": "E044",
+   "true_time": "2026-11-18T17:07:08Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00023",
+   "event_id": "E044",
+   "true_time": "2026-11-18T18:42:04Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "imagery",
+   "record_id": "IMA-00011",
+   "event_id": "E044",
+   "true_time": "2026-11-18T16:33:20Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00028",
+   "event_id": "E045",
+   "true_time": "2026-11-18T10:27:49Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00029",
+   "event_id": "E045",
+   "true_time": "2026-11-18T10:27:49Z",
+   "kind": "duplicate",
+   "duplicate_of": "PAT-00028"
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00024",
+   "event_id": "E045",
+   "true_time": "2026-11-18T12:07:12Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00030",
+   "event_id": "E046",
+   "true_time": "2026-11-17T13:24:19Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00025",
+   "event_id": "E047",
+   "true_time": "2026-11-16T13:15:20Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00031",
+   "event_id": "E048",
+   "true_time": "2026-11-18T00:04:28Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00026",
+   "event_id": "E048",
+   "true_time": "2026-11-18T00:10:52Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00038",
+   "event_id": "E049",
+   "true_time": "2026-11-16T20:56:10Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00039",
+   "event_id": "E049",
+   "true_time": "2026-11-16T19:59:03Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00027",
+   "event_id": "E049",
+   "true_time": "2026-11-16T20:26:22Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00032",
+   "event_id": "E050",
+   "true_time": "2026-11-17T19:07:45Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00040",
+   "event_id": "E051",
+   "true_time": "2026-11-18T00:39:59Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00028",
+   "event_id": "E051",
+   "true_time": "2026-11-18T01:13:03Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00022",
+   "event_id": "E051",
+   "true_time": "2026-11-18T01:30:51Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00033",
+   "event_id": "E052",
+   "true_time": "2026-11-16T06:16:01Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00034",
+   "event_id": "E052",
+   "true_time": "2026-11-16T06:16:01Z",
+   "kind": "correction",
+   "duplicate_of": "PAT-00033"
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00041",
+   "event_id": "E053",
+   "true_time": "2026-11-16T16:19:39Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00042",
+   "event_id": "E054",
+   "true_time": "2026-11-16T14:16:01Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00035",
+   "event_id": "E054",
+   "true_time": "2026-11-16T13:28:55Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00029",
+   "event_id": "E054",
+   "true_time": "2026-11-16T14:52:50Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "imagery",
+   "record_id": "IMA-00012",
+   "event_id": "E054",
+   "true_time": "2026-11-16T16:32:13Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00036",
+   "event_id": "E055",
+   "true_time": "2026-11-16T07:57:44Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00030",
+   "event_id": "E055",
+   "true_time": "2026-11-16T07:30:00Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00023",
+   "event_id": "E055",
+   "true_time": "2026-11-16T08:13:25Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00037",
+   "event_id": "E056",
+   "true_time": "2026-11-17T15:26:06Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00031",
+   "event_id": "E056",
+   "true_time": "2026-11-17T15:15:20Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00024",
+   "event_id": "E056",
+   "true_time": "2026-11-17T15:42:47Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00043",
+   "event_id": "E057",
+   "true_time": "2026-11-17T03:46:06Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00044",
+   "event_id": "E057",
+   "true_time": "2026-11-17T03:46:50Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00038",
+   "event_id": "E058",
+   "true_time": "2026-11-18T09:19:39Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00032",
+   "event_id": "E058",
+   "true_time": "2026-11-18T09:12:11Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "imagery",
+   "record_id": "IMA-00013",
+   "event_id": "E058",
+   "true_time": "2026-11-18T09:46:44Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00039",
+   "event_id": "E059",
+   "true_time": "2026-11-17T14:32:04Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "imagery",
+   "record_id": "IMA-00014",
+   "event_id": "E059",
+   "true_time": "2026-11-17T14:27:10Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00045",
+   "event_id": "E060",
+   "true_time": "2026-11-16T20:48:10Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00046",
+   "event_id": "E060",
+   "true_time": "2026-11-16T20:58:39Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "sensor",
+   "record_id": "SEN-00047",
+   "event_id": "E060",
+   "true_time": "2026-11-16T20:39:21Z",
+   "kind": "genuine",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00025",
+   "event_id": null,
+   "true_time": "2026-11-17T16:00:00Z",
+   "kind": "false",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00026",
+   "event_id": null,
+   "true_time": "2026-11-17T16:00:00Z",
+   "kind": "false",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00027",
+   "event_id": null,
+   "true_time": "2026-11-17T03:59:00Z",
+   "kind": "noise",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00040",
+   "event_id": null,
+   "true_time": "2026-11-18T21:55:00Z",
+   "kind": "noise",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00033",
+   "event_id": null,
+   "true_time": "2026-11-18T23:13:00Z",
+   "kind": "noise",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00041",
+   "event_id": null,
+   "true_time": "2026-11-18T14:23:00Z",
+   "kind": "noise",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00028",
+   "event_id": null,
+   "true_time": "2026-11-18T05:35:00Z",
+   "kind": "noise",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00029",
+   "event_id": null,
+   "true_time": "2026-11-18T00:32:00Z",
+   "kind": "noise",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00034",
+   "event_id": null,
+   "true_time": "2026-11-17T10:28:00Z",
+   "kind": "noise",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00042",
+   "event_id": null,
+   "true_time": "2026-11-18T06:34:00Z",
+   "kind": "noise",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00035",
+   "event_id": null,
+   "true_time": "2026-11-16T10:15:00Z",
+   "kind": "noise",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00030",
+   "event_id": null,
+   "true_time": "2026-11-18T00:04:00Z",
+   "kind": "noise",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00043",
+   "event_id": null,
+   "true_time": "2026-11-16T14:55:00Z",
+   "kind": "noise",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00031",
+   "event_id": null,
+   "true_time": "2026-11-18T06:40:00Z",
+   "kind": "noise",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00036",
+   "event_id": null,
+   "true_time": "2026-11-18T05:30:00Z",
+   "kind": "noise",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00044",
+   "event_id": null,
+   "true_time": "2026-11-16T22:27:00Z",
+   "kind": "noise",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00037",
+   "event_id": null,
+   "true_time": "2026-11-17T02:22:00Z",
+   "kind": "noise",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00045",
+   "event_id": null,
+   "true_time": "2026-11-17T06:51:00Z",
+   "kind": "noise",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00038",
+   "event_id": null,
+   "true_time": "2026-11-18T08:25:00Z",
+   "kind": "noise",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00039",
+   "event_id": null,
+   "true_time": "2026-11-16T17:05:00Z",
+   "kind": "noise",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00040",
+   "event_id": null,
+   "true_time": "2026-11-17T07:27:00Z",
+   "kind": "noise",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00041",
+   "event_id": null,
+   "true_time": "2026-11-17T10:37:00Z",
+   "kind": "noise",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00046",
+   "event_id": null,
+   "true_time": "2026-11-18T17:45:00Z",
+   "kind": "noise",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00047",
+   "event_id": null,
+   "true_time": "2026-11-18T00:52:00Z",
+   "kind": "noise",
+   "duplicate_of": null
+  },
+  {
+   "source": "comms",
+   "record_id": "COM-00042",
+   "event_id": null,
+   "true_time": "2026-11-17T19:44:00Z",
+   "kind": "noise",
+   "duplicate_of": null
+  },
+  {
+   "source": "osint",
+   "record_id": "OSI-00032",
+   "event_id": null,
+   "true_time": "2026-11-18T10:30:00Z",
+   "kind": "noise",
+   "duplicate_of": null
+  },
+  {
+   "source": "patrol",
+   "record_id": "PAT-00048",
+   "event_id": null,
+   "true_time": "2026-11-18T01:29:00Z",
+   "kind": "noise",
+   "duplicate_of": null
+  }
+ ]
+}

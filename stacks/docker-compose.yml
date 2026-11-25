@@ -1,0 +1,88 @@
+# CJIM fusion testbed: Redpanda (Kafka API), PostGIS, OpenSearch, Qdrant, Grafana, the pipeline
+# workers and the dashboard API. vLLM runs outside Docker, on the host's GPU (vLLM Metal on a Mac,
+# vLLM on NVIDIA elsewhere); VLLM_URL and VLLM_EMBED_URL point at it.
+# Memory limits fit a 3 GB Docker VM (next to vLLM on an 8 GB Mac).
+name: cjim
+
+x-py: &py
+  image: cjim-py:local
+  restart: unless-stopped
+  environment: &pyenv
+    PG: "host=db dbname=cjim user=cjim password=cjim"
+    KAFKA: "redpanda:9092"
+    OPENSEARCH: "http://opensearch:9200"
+    QDRANT: "http://qdrant:6333"
+    VLLM_URL: "${VLLM_URL:-http://host.lima.internal:8000/v1}"
+    VLLM_EMBED_URL: "${VLLM_EMBED_URL:-http://host.lima.internal:8001/v1}"
+    VLLM_MODEL: "${VLLM_MODEL:-qwen3.5-2b}"
+    VLLM_EMBED_MODEL: "${VLLM_EMBED_MODEL:-qwen3-embedding}"
+  extra_hosts: ["host.docker.internal:host-gateway"]
+  volumes: ["../data:/app/data", "../results:/app/results"]
+
+services:
+  redpanda:
+    image: redpandadata/redpanda:v24.3.1
+    restart: unless-stopped
+    command: >
+      redpanda start --mode dev-container --smp 1 --memory 400M --overprovisioned
+      --kafka-addr internal://0.0.0.0:9092 --advertise-kafka-addr internal://redpanda:9092
+    mem_limit: 700m
+
+  db:
+    image: imresamu/postgis:16-3.4
+    restart: unless-stopped
+    environment: {POSTGRES_USER: cjim, POSTGRES_PASSWORD: cjim, POSTGRES_DB: cjim}
+    volumes: [pg:/var/lib/postgresql/data]
+    ports: ["127.0.0.1:5433:5432"]
+    mem_limit: 400m
+
+  opensearch:
+    image: opensearchproject/opensearch:2.18.0
+    restart: unless-stopped
+    environment:
+      discovery.type: single-node
+      DISABLE_SECURITY_PLUGIN: "true"
+      DISABLE_INSTALL_DEMO_CONFIG: "true"
+      OPENSEARCH_JAVA_OPTS: "-Xms256m -Xmx256m"
+    volumes: [os:/usr/share/opensearch/data]
+    mem_limit: 700m
+
+  qdrant:
+    image: qdrant/qdrant:v1.12.4
+    restart: unless-stopped
+    volumes: [qd:/qdrant/storage]
+    mem_limit: 300m
+
+  normalizer:
+    <<: *py
+    command: python -m fusion.pipeline normalize
+    depends_on: [redpanda, db, opensearch, qdrant]
+
+  fuser:
+    <<: *py
+    command: python -m fusion.pipeline fuse
+    depends_on: [db]
+
+  api:
+    <<: *py
+    command: uvicorn api.main:app --host 0.0.0.0 --port 8090
+    ports: ["127.0.0.1:8090:8090"]
+    depends_on: [db, opensearch, qdrant]
+
+  grafana:
+    image: grafana/grafana-oss:11.3.1
+    restart: unless-stopped
+    environment:
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+      GF_AUTH_ANONYMOUS_ORG_ROLE: Viewer
+      GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH: /var/lib/grafana/dashboards/cjim.json
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./grafana/dashboards:/var/lib/grafana/dashboards:ro
+    ports: ["127.0.0.1:3001:3000"]
+    mem_limit: 250m
+
+volumes:
+  pg: {}
+  os: {}
+  qd: {}

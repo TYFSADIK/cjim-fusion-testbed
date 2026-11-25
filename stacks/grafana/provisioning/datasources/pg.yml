@@ -1,0 +1,10 @@
+apiVersion: 1
+datasources:
+  - name: CJIM
+    uid: cjim
+    type: grafana-postgresql-datasource
+    url: db:5432
+    user: cjim
+    secureJsonData: {password: cjim}
+    jsonData: {database: cjim, sslmode: disable, postgresVersion: 1600}
+    isDefault: true

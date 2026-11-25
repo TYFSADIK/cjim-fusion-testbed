@@ -1,0 +1,42 @@
+{"source": "comms", "record_id": "COM-00020", "received_at": "2026-11-16T03:36:24Z", "payload": {"line": "2026-11-16T03:43:04Z,VICTOR 9,9 VEHICLES WITH BLUE-3 ON THE ROAD FROM PORT AVERY"}}
+{"source": "comms", "record_id": "COM-00030", "received_at": "2026-11-16T07:30:20Z", "payload": {"line": "2026-11-16T07:37:00Z,KILO 4,NAV DISPLAYS GOING HAYWIRE AROUND HIGHCLIFF RADAR"}}
+{"source": "comms", "record_id": "COM-00002", "received_at": "2026-11-16T08:03:11Z", "payload": {"line": "2026-11-16T08:09:51Z,HOTEL 2,GREY TERN LOITERING NEAR GANNET BANK"}}
+{"source": "comms", "record_id": "COM-00006", "received_at": "2026-11-16T08:05:52Z", "payload": {"line": "2026-11-16T08:12:32Z,KILO 4,A LINE OF 7 TRUCKS BELONGING TO BLUE-3 LEFT KESTREL PT"}}
+{"source": "comms", "record_id": "COM-00035", "received_at": "2026-11-16T10:15:20Z", "payload": {"line": "2026-11-16T10:22:00Z,ZERO,PATROL RETURNED TO BASE"}}
+{"source": "comms", "record_id": "COM-00014", "received_at": "2026-11-16T11:22:42Z", "payload": {"line": "2026-11-16T11:29:22Z,HOTEL 2,LNTRN21 OPERATING OVER RIDLEY AIRFIELD"}}
+{"source": "comms", "record_id": "COM-00021", "received_at": "2026-11-16T11:49:33Z", "payload": {"line": "2026-11-16T11:56:13Z,KILO 4,POSITION FIX WANDERING KILOMETRES OFF NEAR HC RADAR"}}
+{"source": "comms", "record_id": "COM-00005", "received_at": "2026-11-16T12:47:41Z", "payload": {"line": "2026-11-16T12:54:21Z,KILO 4,FAIRHAVEN DEPOT RUNNING ON ITS OWN DIESEL, GRID SUPPLY GONE"}}
+{"source": "comms", "record_id": "COM-00025", "received_at": "2026-11-16T13:15:40Z", "payload": {"line": "2026-11-16T13:22:20Z,VICTOR 9,2 VEHICLES WITH BLUE-3 ON THE ROAD FROM KESTREL"}}
+{"source": "comms", "record_id": "COM-00029", "received_at": "2026-11-16T14:53:10Z", "payload": {"line": "2026-11-16T14:59:50Z,VICTOR 9,8 CONTAINERS BEING LOADED AT PORT AVERY ONTO HALCYON"}}
+{"source": "comms", "record_id": "COM-00039", "received_at": "2026-11-16T17:05:20Z", "payload": {"line": "2026-11-16T17:12:00Z,ZERO,WEATHER DETERIORATING, WINDS 30 KNOTS"}}
+{"source": "comms", "record_id": "COM-00022", "received_at": "2026-11-16T18:45:46Z", "payload": {"line": "2026-11-16T18:52:26Z,KILO 4,GPS SIGNAL LOST NEAR HIGHCLIFF RADAR"}}
+{"source": "comms", "record_id": "COM-00027", "received_at": "2026-11-16T20:26:42Z", "payload": {"line": "2026-11-16T20:33:22Z,HOTEL 2,LNTRN21 LOW PASS OVER RIDLEY AIRFIELD"}}
+{"source": "comms", "record_id": "COM-00017", "received_at": "2026-11-16T22:17:58Z", "payload": {"line": "2026-11-16T22:24:38Z,HOTEL 2,6 CONTAINERS BEING LOADED AT PORT AVERY ONTO ORCA DAWN"}}
+{"source": "comms", "record_id": "COM-00037", "received_at": "2026-11-17T02:22:20Z", "payload": {"line": "2026-11-17T02:29:00Z,ZERO,ROUTINE FUEL DELIVERY COMPLETED"}}
+{"source": "comms", "record_id": "COM-00016", "received_at": "2026-11-17T04:00:57Z", "payload": {"line": "2026-11-17T04:07:37Z,HOTEL 2,POWER OUT AT FAIRHAVEN DEPOT"}}
+{"source": "comms", "record_id": "COM-00011", "received_at": "2026-11-17T04:29:24Z", "payload": {"line": "2026-11-17T04:36:04Z,HOTEL 2,LNTRN21 HEARD OVERHEAD AT HIGHCLIFF RADAR FOR A LONG TIME"}}
+{"source": "comms", "record_id": "COM-00019", "received_at": "2026-11-17T05:17:42Z", "payload": {"line": "2026-11-17T05:24:22Z,KILO 4,CARGO OPERATIONS AT PORT AVERY WITH HALCYON, ABOUT 4 LOADS"}}
+{"source": "comms", "record_id": "COM-00004", "received_at": "2026-11-17T05:58:12Z", "payload": {"line": "2026-11-17T06:04:52Z,VICTOR 9,ASHBY SUBSTATION ON BACKUP GENERATORS AFTER OUTAGE"}}
+{"source": "comms", "record_id": "COM-00040", "received_at": "2026-11-17T07:27:20Z", "payload": {"line": "2026-11-17T07:34:00Z,ZERO,PATROL RETURNED TO BASE"}}
+{"source": "comms", "record_id": "COM-00012", "received_at": "2026-11-17T07:41:37Z", "payload": {"line": "2026-11-17T07:48:17Z,VICTOR 9,BLUE-3 ROLLED OUT OF PT AVERY IN 8 TRUCKS"}}
+{"source": "comms", "record_id": "COM-00015", "received_at": "2026-11-17T10:23:45Z", "payload": {"line": "2026-11-17T10:30:25Z,HOTEL 2,GREY TERN HOLDING POSITION OFF MERROW IS"}}
+{"source": "comms", "record_id": "COM-00034", "received_at": "2026-11-17T10:28:20Z", "payload": {"line": "2026-11-17T10:35:00Z,ZERO,PATROL RETURNED TO BASE"}}
+{"source": "comms", "record_id": "COM-00041", "received_at": "2026-11-17T10:37:20Z", "payload": {"line": "2026-11-17T10:44:00Z,ZERO,NOTHING SIGNIFICANT TO REPORT"}}
+{"source": "comms", "record_id": "COM-00007", "received_at": "2026-11-17T13:00:39Z", "payload": {"line": "2026-11-17T13:07:19Z,KILO 4,SOMETHING SMALL WITH BLINKING LIGHTS BUZZING OVER RIDLEY AIRFIELD"}}
+{"source": "comms", "record_id": "COM-00031", "received_at": "2026-11-17T15:15:40Z", "payload": {"line": "2026-11-17T15:22:20Z,KILO 4,NAVIGATION INTERFERENCE REPORTED AT NORTH SPIT"}}
+{"source": "comms", "record_id": "COM-00008", "received_at": "2026-11-17T18:36:10Z", "payload": {"line": "2026-11-17T18:42:50Z,KILO 4,UAS SPOTTED NEAR ASHBY SUBSTATION, OPERATOR NOT SEEN"}}
+{"source": "comms", "record_id": "COM-00042", "received_at": "2026-11-17T19:44:20Z", "payload": {"line": "2026-11-17T19:51:00Z,ZERO,PATROL RETURNED TO BASE"}}
+{"source": "comms", "record_id": "COM-00026", "received_at": "2026-11-18T00:11:12Z", "payload": {"line": "2026-11-18T00:17:52Z,VICTOR 9,NAV DISPLAYS GOING HAYWIRE AROUND N SPIT"}}
+{"source": "comms", "record_id": "COM-00018", "received_at": "2026-11-18T00:41:21Z", "payload": {"line": "2026-11-18T00:48:01Z,KILO 4,RED-1 ROLLED OUT OF FAIRHAVEN DEPOT IN 3 TRUCKS"}}
+{"source": "comms", "record_id": "COM-00028", "received_at": "2026-11-18T01:13:23Z", "payload": {"line": "2026-11-18T01:20:03Z,KILO 4,LNTRN21 OPERATING OVER GANNET BANK"}}
+{"source": "comms", "record_id": "COM-00013", "received_at": "2026-11-18T01:13:51Z", "payload": {"line": "2026-11-18T01:20:31Z,KILO 4,UAS SEEN HOVERING OVER RIDLEY AIRFIELD"}}
+{"source": "comms", "record_id": "COM-00009", "received_at": "2026-11-18T04:43:12Z", "payload": {"line": "2026-11-18T04:49:52Z,KILO 4,A LINE OF 2 TRUCKS BELONGING TO RED-1 LEFT PORT AVERY"}}
+{"source": "comms", "record_id": "COM-00036", "received_at": "2026-11-18T05:30:20Z", "payload": {"line": "2026-11-18T05:37:00Z,ZERO,NOTHING SIGNIFICANT TO REPORT"}}
+{"source": "comms", "record_id": "COM-00038", "received_at": "2026-11-18T08:25:20Z", "payload": {"line": "2026-11-18T08:32:00Z,ZERO,WEATHER DETERIORATING, WINDS 30 KNOTS"}}
+{"source": "comms", "record_id": "COM-00032", "received_at": "2026-11-18T09:12:31Z", "payload": {"line": "2026-11-18T09:19:11Z,KILO 4,CONVOY OF 8 VEHICLES (RED-1) MOVING OUT OF KESTREL POINT"}}
+{"source": "comms", "record_id": "COM-00010", "received_at": "2026-11-18T11:09:56Z", "payload": {"line": "2026-11-18T11:16:36Z,VICTOR 9,GREY TERN WENT BY TOLLAND FERRY NORTHBOUND WITHOUT STOPPING"}}
+{"source": "comms", "record_id": "COM-00024", "received_at": "2026-11-18T12:07:32Z", "payload": {"line": "2026-11-18T12:14:12Z,VICTOR 9,LIGHTS WENT DARK ACROSS ASHBY SUB"}}
+{"source": "comms", "record_id": "COM-00003", "received_at": "2026-11-18T16:44:20Z", "payload": {"line": "2026-11-18T16:51:00Z,KILO 4,ORCA DAWN HOLDING POSITION OFF GANNET BANK"}}
+{"source": "comms", "record_id": "COM-00001", "received_at": "2026-11-18T17:42:44Z", "payload": {"line": "2026-11-18T17:49:24Z,KILO 4,GNSS JAMMING SUSPECTED AROUND NORTH SPIT"}}
+{"source": "comms", "record_id": "COM-00023", "received_at": "2026-11-18T18:42:24Z", "payload": {"line": "2026-11-18T18:49:04Z,HOTEL 2,DARK VESSEL LOITERING NEAR MERROW ISLAND"}}
+{"source": "comms", "record_id": "COM-00033", "received_at": "2026-11-18T23:13:20Z", "payload": {"line": "2026-11-18T23:20:00Z,ZERO,PATROL RETURNED TO BASE"}}

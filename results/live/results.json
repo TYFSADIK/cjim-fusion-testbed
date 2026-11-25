@@ -1,0 +1,102 @@
+{
+ "extraction": {
+  "records": 105,
+  "type": 0.924,
+  "place": 1.0,
+  "entities": 0.962,
+  "noise_recognised": 1.0
+ },
+ "duplicates": {
+  "true": 7,
+  "marked": 7,
+  "precision": 1.0,
+  "recall": 1.0
+ },
+ "time_after": {
+  "comms": {
+   "median_min": 0.3,
+   "p90_min": 0.3,
+   "n": 32
+  },
+  "imagery": {
+   "median_min": 0.0,
+   "p90_min": 0.0,
+   "n": 14
+  },
+  "patrol": {
+   "median_min": 0.5,
+   "p90_min": 0.9,
+   "n": 32
+  },
+  "sensor": {
+   "median_min": 0.0,
+   "p90_min": 0.0,
+   "n": 47
+  }
+ },
+ "association": {
+  "precision": 0.973,
+  "recall": 0.868,
+  "f1": 0.918
+ },
+ "events": {
+  "fused": 69,
+  "pure": 66,
+  "real_observed": 60,
+  "real_found": 59
+ },
+ "confidence": {
+  "real_events_by_band": {
+   "high": 45,
+   "medium": 21,
+   "low": 2
+  },
+  "rumour": [
+   {
+    "band": "low",
+    "confidence": 0.315,
+    "sources": [
+     "osint"
+    ]
+   }
+  ]
+ },
+ "reports": {
+  "reports": 69,
+  "sentences": 163,
+  "supported": 155,
+  "supported_share": 0.951,
+  "reports_fully_supported": 62,
+  "unsupported_by_kind": {
+   "claims multiple independent sources; the event has 1": 1,
+   "claims three independent sources; the event has 1": 1,
+   "small": 1,
+   "time": 3,
+   "quadcopter": 1,
+   "claims two independent sources; the event has 1": 2
+  }
+ },
+ "time_findings": {
+  "comms": {
+   "clock_offset_s": 400.0
+  },
+  "patrol": {
+   "local_time_labelled_z": 1
+  }
+ },
+ "last_fusion": {
+  "events": 69,
+  "seconds": 244.4,
+  "superseded": 1,
+  "observations": 183,
+  "time_findings": {
+   "comms": {
+    "clock_offset_s": 400.0
+   },
+   "patrol": {
+    "local_time_labelled_z": 1
+   }
+  },
+  "reports_written": 37
+ }
+}

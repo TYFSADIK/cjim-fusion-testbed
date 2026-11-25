@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CJIM Fusion</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+  :root { --bg:#0f1218; --panel:#171b23; --line:#2a303c; --text:#e6e8ec; --muted:#9aa3b2;
+          --high:#2fa36b; --medium:#d9a21b; --low:#d6453d; --accent:#6aa5ff; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:14px/1.45 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background:var(--bg); color:var(--text); }
+  header { display:flex; gap:16px; align-items:center; padding:10px 16px; border-bottom:1px solid var(--line); flex-wrap:wrap; }
+  header h1 { font-size:16px; margin:0; }
+  header .stats { color:var(--muted); font-size:12px; }
+  header form { margin-left:auto; display:flex; gap:6px; }
+  input, select, button, textarea { font:inherit; background:#0b0e13; color:var(--text); border:1px solid var(--line); border-radius:6px; padding:6px 8px; }
+  button { cursor:pointer; } button.approve { border-color:var(--high); } button.reject { border-color:var(--low); }
+  main { display:grid; grid-template-columns: 360px 1fr 460px; height:calc(100vh - 52px); }
+  @media (max-width:1100px) { main { grid-template-columns:1fr; height:auto; } #map { height:340px; } }
+  #list { overflow:auto; border-right:1px solid var(--line); }
+  .ev { padding:9px 12px; border-bottom:1px solid var(--line); cursor:pointer; }
+  .ev:hover, .ev.sel { background:#1d222c; }
+  .ev b { display:block; } .ev small { color:var(--muted); }
+  .band { display:inline-block; font-size:11px; font-weight:700; padding:1px 6px; border-radius:4px; margin-right:6px; color:#0b0e13; }
+  .band.high { background:var(--high); } .band.medium { background:var(--medium); } .band.low { background:var(--low); }
+  #map { height:100%; }
+  #detail { overflow:auto; border-left:1px solid var(--line); padding:12px 14px; }
+  #detail h2 { font-size:15px; margin:0 0 6px; }
+  .sent { padding:6px 8px; border-left:3px solid var(--high); margin:6px 0; background:#1a1f28; border-radius:4px; }
+  .sent.bad { border-left-color:var(--low); }
+  .cite { display:inline-block; font-size:11px; color:var(--accent); border:1px solid #2d3d5c; border-radius:4px; padding:0 4px; margin:2px 2px 0 0; cursor:pointer; }
+  .prob { color:var(--low); font-size:12px; }
+  .obs { font-size:12px; padding:6px 8px; border:1px solid var(--line); border-radius:4px; margin:6px 0; }
+  .obs.hl { border-color:var(--accent); }
+  .muted { color:var(--muted); }
+  .chip { font-size:11px; border:1px solid var(--line); border-radius:10px; padding:0 6px; margin-right:4px; color:var(--muted); }
+  a { color:var(--accent); }
+  pre { white-space:pre-wrap; font-size:11px; color:var(--muted); margin:4px 0 0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>CJIM Fusion: Exercise NORTHERN LANTERN</h1>
+  <span class="stats" id="stats"></span>
+  <form id="sf"><input id="q" placeholder="Search reports" size="26"><select id="mode"><option value="text">words</option><option value="meaning">meaning</option></select><button>Search</button></form>
+</header>
+<main>
+  <div id="list"></div>
+  <div id="map"></div>
+  <div id="detail"><p class="muted">Choose an event. Every summary sentence cites the observations behind it; sentences the checker could not verify are marked in red. Approve or reject each report.</p></div>
+</main>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const hm = s => s ? s.slice(8,10) + " " + s.slice(11,13) + s.slice(14,16) + "Z" : "";
+const nice = t => (t || "unknown").replace(/_/g, " ");
+const map = L.map("map").setView([46.5, -60.8], 8);
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {maxZoom: 13, attribution: "&copy; OpenStreetMap"}).addTo(map);
+const layer = L.layerGroup().addTo(map);
+const colour = {high: "#2fa36b", medium: "#d9a21b", low: "#d6453d"};
+let events = [];
+
+async function load() {
+  events = await (await fetch("/api/events")).json();
+  const s = await (await fetch("/api/stats")).json();
+  document.getElementById("stats").textContent =
+    `${s.observations} observations (${s.read_by_llm} read by vLLM) · ${s.events} events · high ${s.bands.high}, medium ${s.bands.medium}, low ${s.bands.low} · reviewed ${(s.reports.approved||0) + (s.reports.rejected||0)}`;
+  document.getElementById("list").innerHTML = events.map(e => `<div class="ev" data-id="${e.event_id}">
+      <b><span class="band ${e.band}">${e.band.toUpperCase()}</span>${esc(nice(e.type))}</b>
+      <small>${esc(e.place || "place unknown")} · ${hm(e.start)} · ${e.observations} obs from ${e.sources.length} source${e.sources.length>1?"s":""} · ${esc(e.report_status || "")}</small></div>`).join("");
+  layer.clearLayers();
+  events.filter(e => e.lat).forEach(e => L.circleMarker([e.lat, e.lon], {radius: 5 + e.observations, color: colour[e.band], weight: 2, fillOpacity: .35})
+     .bindTooltip(`${nice(e.type)} · ${e.place} · ${e.band}`).on("click", () => show(e.event_id)).addTo(layer));
+  document.querySelectorAll(".ev").forEach(d => d.onclick = () => show(d.dataset.id));
+}
+
+async function show(id) {
+  document.querySelectorAll(".ev").forEach(d => d.classList.toggle("sel", d.dataset.id === id));
+  const d = await (await fetch(`/api/events/${id}`)).json();
+  const e = d.event, r = d.report;
+  if (e.lat) map.setView([e.lat, e.lon], 10);
+  const sents = r && r.sentences ? r.sentences.map(s => `<div class="sent ${s.supported ? "" : "bad"}">${esc(s.text)}<br>
+      ${s.cites.map(c => `<span class="cite" data-c="${esc(c)}">${esc(c)}</span>`).join("")}
+      ${s.problems && s.problems.length ? `<div class="prob">${s.problems.map(esc).join("; ")}</div>` : ""}</div>`).join("") : "<p class='muted'>No report yet.</p>";
+  document.getElementById("detail").innerHTML = `
+    <h2><span class="band ${e.band}">${e.band.toUpperCase()} ${e.confidence}</span>${esc(nice(e.type))} at ${esc(e.place || "?")}</h2>
+    <p class="muted">${hm(e.start)} to ${hm(e.end)} · sources: ${e.sources.map(s => `<span class="chip">${s}</span>`).join("")}
+      ${e.entities.length ? "· " + e.entities.join(", ") : ""} ${e.count != null ? "· count " + e.count + (e.count_conflict ? " (sources disagree)" : "") : ""}</p>
+    <h3 style="font-size:13px">Report <span class="muted">(${esc(d.status)}${d.review && d.review.reviewer ? " by " + esc(d.review.reviewer) : ""})</span></h3>
+    ${sents}
+    ${r ? `<p class="muted"><i>${esc(r.assessment)}</i></p>` : ""}
+    <p><textarea id="note" rows="2" style="width:100%" placeholder="Review note"></textarea></p>
+    <p><button class="approve" onclick="rev('${id}','approve')">Approve</button> <button class="reject" onclick="rev('${id}','reject')">Reject</button></p>
+    <h3 style="font-size:13px">Evidence (${d.observations.length})</h3>
+    ${d.observations.map(o => `<div class="obs" id="o-${esc(o.obs_id)}"><b>${esc(o.obs_id)}</b> <span class="chip">${o.source} ${o.reliability}${o.credibility}</span>
+      ${o.duplicate_of ? '<span class="chip">copy</span>' : ""}<br>${hm(o.time)} ${esc(o.time_basis || "")}${(o.adjustments||[]).length ? " · " + esc(o.adjustments.join("; ")) : ""}<br>
+      ${esc(o.text)}<pre>${esc(JSON.stringify(o.raw))}</pre></div>`).join("")}`;
+  document.querySelectorAll(".cite").forEach(c => c.onclick = () => {
+    const el = document.getElementById("o-" + c.dataset.c); if (el) { el.classList.add("hl"); el.scrollIntoView({behavior: "smooth", block: "center"}); }
+  });
+}
+
+async function rev(id, decision) {
+  await fetch(`/api/events/${id}/review`, {method: "POST", headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({decision, note: document.getElementById("note").value, reviewer: "analyst"})});
+  await load(); show(id);
+}
+
+document.getElementById("sf").onsubmit = async ev => {
+  ev.preventDefault();
+  const q = document.getElementById("q").value, mode = document.getElementById("mode").value;
+  const hits = await (await fetch(`/api/search?q=${encodeURIComponent(q)}&mode=${mode}`)).json();
+  document.getElementById("detail").innerHTML = `<h2>${hits.length} results for "${esc(q)}" (${mode})</h2>` +
+    hits.map(h => `<div class="obs"><b>${esc(h.obs_id)}</b> <span class="chip">${h.source}</span> <span class="muted">${h.score}</span><br>
+      ${hm(h.time)} ${esc(h.place || "")}<br>${esc(h.text)}<br>${h.event_id ? `<a href="#" onclick="show('${h.event_id}');return false">event ${h.event_id}</a>` : '<span class="muted">not part of an event</span>'}</div>`).join("");
+};
+load(); setInterval(load, 15000);
+</script>
+</body>
+</html>
